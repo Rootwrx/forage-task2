@@ -1,5 +1,7 @@
 package com.wellsfargo.counselor.entity;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,7 +21,7 @@ public class Portfolio {
     private Client client;
 
     @Column(nullable = false)
-    private String creationDate;
+    private LocalDate creationDate;
 
     public Portfolio(Client client) {
 
@@ -28,5 +30,9 @@ public class Portfolio {
 
     public Client getClient() {
         return client;
+    }
+    public void setCreateDate (LocalDate creationDate) {
+
+        this.creationDate = creationDate;
     }
 }
